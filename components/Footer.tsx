@@ -1,10 +1,16 @@
+import Link from "next/link";
 import Logo from "./Logo";
 
 const footerLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
-  { label: "Work", href: "#work" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/#services" },
+  { label: "Process", href: "/#process" },
+  { label: "Work", href: "/#work" },
+  { label: "Contact", href: "/#contact" },
+];
+
+const legalLinks = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Service", href: "/terms-of-service" },
 ];
 
 const socials = [
@@ -50,12 +56,12 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               {footerLinks.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm text-cream-300/75 transition-colors hover:text-cream-50"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -102,9 +108,20 @@ export default function Footer() {
             © {new Date().getFullYear()} MirthLuxe AI Studio. All rights
             reserved.
           </p>
-          <p className="text-xs text-cream-300/55">
-            Crafted with precision · Built to perform
-          </p>
+          <nav
+            aria-label="Legal"
+            className="flex items-center gap-5 text-xs text-cream-300/70"
+          >
+            {legalLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="transition-colors hover:text-champagne-200"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
         </div>
       </div>
     </footer>

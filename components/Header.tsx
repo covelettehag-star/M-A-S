@@ -1,14 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import Logo from "./Logo";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
-  { label: "Work", href: "#work" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/#services" },
+  { label: "Process", href: "/#process" },
+  { label: "Work", href: "/#work" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Header() {
@@ -39,28 +40,28 @@ export default function Header() {
             : "border border-transparent bg-transparent"
         }`}
       >
-        <a href="#top" className="flex items-center" aria-label="MirthLuxe AI Studio home">
+        <Link href="/" className="flex items-center" aria-label="MirthLuxe AI Studio home">
           <Logo />
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="group relative text-sm font-medium text-cream-200/80 transition-colors hover:text-cream-50"
             >
               {link.label}
               <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-gold-gradient transition-all duration-300 group-hover:w-full" />
-            </a>
+            </Link>
           ))}
         </nav>
 
         <div className="hidden lg:block">
-          <a href="#contact" className="btn-gold">
+          <Link href="/#contact" className="btn-gold">
             Book a Free AI Audit
-          </a>
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -101,22 +102,22 @@ export default function Header() {
       >
         <nav className="flex flex-col" aria-label="Mobile">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
               className="rounded-xl px-4 py-3 text-base font-medium text-cream-100 transition-colors hover:bg-champagne-500/10"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             onClick={() => setOpen(false)}
             className="btn-gold mt-2 justify-center"
           >
             Book a Free AI Audit
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
