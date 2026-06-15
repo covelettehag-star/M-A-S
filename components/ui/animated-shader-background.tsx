@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 
 /**
@@ -11,6 +11,7 @@ import * as THREE from "three";
  */
 export default function AnimatedShaderBackground() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -126,6 +127,9 @@ export default function AnimatedShaderBackground() {
       animate();
     }
 
+    // Fade the canvas in once the first frame has been drawn.
+    setReady(true);
+
     const handleResize = () => {
       const w = container.clientWidth || window.innerWidth;
       const h = container.clientHeight || window.innerHeight;
@@ -146,5 +150,11 @@ export default function AnimatedShaderBackground() {
     };
   }, []);
 
-  return <div ref={containerRef} className="absolute inset-0 h-full w-full" />;
+  return (
+    <div
+      ref={containerRef}
+      className="absolute inset-0 h-full w-full transition-opacity duration-1000 ease-out"
+      style={{ opacity: ready ? 1 : 0 }}
+    />
+  );
 }
