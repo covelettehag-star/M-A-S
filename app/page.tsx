@@ -1,15 +1,18 @@
-export default function AiDemoPage() {
-  return (
-    <main>
-      <h1>Try the Agent in Action</h1>
+import Background from "@/components/Background";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Problem from "@/components/Problem";
+import Services from "@/components/Services";
+import Process from "@/components/Process";
+import Portfolio from "@/components/Portfolio";
+import WhyUs from "@/components/WhyUs";
+import CTA from "@/components/CTA";
+import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer";
 
-      <iframe
-        src="https://buildmyagent.io/shared/AW3hdk8qP9?embed=true"
-        width="100%"
-        height="600"
-        style={{ border: "none", width: "100%", minHeight: "400px" }}
-        allowFullScreen
-        loading="lazy"
-        title="MirthLuxe AI Studio Assistant Demo"
-      />
-    </main>
+export default function Home() {
+return (
+<> <Background /> <Header /> <main className="relative z-10"> <Hero /> <Problem /> <Services /> <Process /> <Portfolio /> <WhyUs /> <CTA /> <FAQ /> </main> <Footer />
+</>
+);
+}
