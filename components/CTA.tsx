@@ -67,3 +67,6 @@ return ( <section id="contact" className="relative scroll-mt-24 py-24 sm:py-28">
     </Reveal>
   </div>
 </section>
+        );
+
+}
