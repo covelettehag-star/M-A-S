@@ -76,7 +76,7 @@ export default function Footer() {
               href="mailto:hello@mirthluxeaistudio.com"
               className="text-sm text-cream-300/75 transition-colors hover:text-cream-50"
             >
-              hello@mirthluxe.ai
+              hello@mirthluxeaistudio.com
             </a>
             <div className="mt-5 flex gap-3">
               {socials.map((social) => (
