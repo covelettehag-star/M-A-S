@@ -25,5 +25,3 @@ return ( <html lang="en" className={poppins.variable}> <body className="font-san
     />
   </body>
 </html>
-);
-}
