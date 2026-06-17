@@ -8,7 +8,6 @@ export default function AiDemo() {
 return ( <section id="ai-demo" className="relative scroll-mt-24 py-24 sm:py-28"> <div className="mx-auto max-w-6xl px-4 sm:px-6"> <Reveal> <div className="text-center"> <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-champagne-300">
 Try the Agent in Action </p>
 
-```
         <h2 className="text-balance text-3xl font-bold leading-[1.1] tracking-tight text-cream-50 sm:text-4xl md:text-5xl">
           Experience the{" "}
           <span className="text-gold">MirthLuxe AI Assistant</span>
