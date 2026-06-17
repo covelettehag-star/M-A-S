@@ -73,7 +73,7 @@ export default function Footer() {
               Get in touch
             </h3>
             <a
-              href="mailto:hello@mirthluxe.ai"
+              href="mailto:hello@mirthluxeaistudio.com"
               className="text-sm text-cream-300/75 transition-colors hover:text-cream-50"
             >
               hello@mirthluxe.ai
