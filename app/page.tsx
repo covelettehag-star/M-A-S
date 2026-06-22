@@ -2,6 +2,7 @@ import Background from "@/components/Background";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
+import LostRevenueCalculator from "@/components/LostRevenueCalculator";
 import Services from "@/components/Services";
 import Process from "@/components/Process";
 import Portfolio from "@/components/Portfolio";
@@ -11,8 +12,22 @@ import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-return (
-<> <Background /> <Header /> <main className="relative z-10"> <Hero /> <Problem /> <Services /> <Process /> <Portfolio /> <WhyUs /> <CTA /> <FAQ /> </main> <Footer />
-</>
-);
+  return (
+    <>
+      <Background />
+      <Header />
+      <main className="relative z-10">
+        <Hero />
+        <Problem />
+        <LostRevenueCalculator />
+        <Services />
+        <Process />
+        <Portfolio />
+        <WhyUs />
+        <CTA />
+        <FAQ />
+      </main>
+      <Footer />
+    </>
+  );
 }
