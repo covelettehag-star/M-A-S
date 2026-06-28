@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import LostRevenueCalculator from "@/components/LostRevenueCalculator";
 import Services from "@/components/Services";
+import Pricing from "@/components/Pricing";
 import Process from "@/components/Process";
 import Portfolio from "@/components/Portfolio";
 import WhyUs from "@/components/WhyUs";
@@ -21,6 +22,7 @@ export default function Home() {
         <Problem />
         <LostRevenueCalculator />
         <Services />
+        <Pricing />
         <Process />
         <Portfolio />
         <WhyUs />
