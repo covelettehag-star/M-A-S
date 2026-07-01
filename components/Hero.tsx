@@ -27,21 +27,20 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-16 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr]">
         {/* Left: copy */}
-        <div className="flex flex-col items-start gap-7">
+        <div className="flex max-w-2xl flex-col items-start gap-7">
           <span className="inline-flex animate-fade-up items-center gap-2 rounded-full border border-champagne-500/25 bg-champagne-500/[0.06] px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-champagne-200">
             <span className="h-1.5 w-1.5 animate-pulse-glow rounded-full bg-champagne-300" />
             24/7 AI Receptionist
           </span>
 
-          <h1 className="text-balance text-4xl font-extrabold leading-[1.05] tracking-tight text-cream-50 sm:text-5xl md:text-6xl lg:text-[4rem]">
-            AI Receptionist That{" "}
-            <span className="text-shimmer">Books Appointments</span> 24/7
+          <h1 className="text-balance text-4xl font-extrabold leading-[1.05] tracking-tight text-cream-50 sm:text-5xl md:text-6xl lg:text-[3.8rem]">
+            Your{" "}
+            <span className="text-shimmer">24/7 AI Receptionist</span>
           </h1>
 
           <p className="max-w-xl text-pretty text-base leading-relaxed text-cream-300/85 sm:text-lg">
-            Never miss another customer call. MirthLuxe AI Studio builds AI
-            receptionists that answer questions, collect customer details, and
-            book appointments automatically — even when your business is closed.
+            Answer calls, collect customer details, and book appointments
+            automatically — even when your business is closed.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row">
