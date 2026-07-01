@@ -12,7 +12,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "MirthLuxe AI Studio",
   description:
-    "Premium AI websites, chatbots, booking automation, and lead capture systems for modern businesses.",
+    "AI receptionist that answers calls and books appointments 24/7 for service businesses.",
 };
 
 export default function RootLayout({
