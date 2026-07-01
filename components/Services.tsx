@@ -2,50 +2,36 @@ import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 import ServiceCard, { type Service } from "./ServiceCard";
 import {
-  IconWebsite,
   IconChat,
   IconVoice,
-  IconReactivate,
   IconCalendar,
-  IconStar,
+  IconWebsite,
 } from "./icons";
 
 const services: Service[] = [
   {
-    icon: IconWebsite,
-    title: "AI Website Design",
+    icon: IconVoice,
+    title: "Answers Calls 24/7",
     description:
-      "Fast, elegant, conversion-focused websites with AI built in — so visitors get answers and book the moment they land.",
+      "Your AI receptionist answers customer calls after hours, on weekends, and when your team is busy.",
   },
   {
     icon: IconChat,
-    title: "AI Chatbot for Customer Support",
+    title: "Answers Common Questions",
     description:
-      "A trained assistant that answers questions, qualifies leads, and captures details 24/7 in your brand's voice.",
+      "It responds to FAQs about services, prices, opening hours, location, policies, and availability.",
   },
   {
-    icon: IconVoice,
-    title: "AI Voice Receptionist",
+    icon: IconWebsite,
+    title: "Collects Customer Details",
     description:
-      "A natural-sounding voice agent that answers calls, books appointments, and never sends a customer to voicemail.",
-  },
-  {
-    icon: IconReactivate,
-    title: "Lead Reactivation System",
-    description:
-      "Automated campaigns that wake up old enquiries and past customers with timely, personal messages that convert.",
+      "It captures the customer’s name, phone number, service request, preferred time, and important notes.",
   },
   {
     icon: IconCalendar,
-    title: "Booking & Appointment Automation",
+    title: "Books Appointments Automatically",
     description:
-      "Self-serve scheduling with confirmations and reminders that fill your calendar and cut no-shows on autopilot.",
-  },
-  {
-    icon: IconStar,
-    title: "Google Review & Reputation Automation",
-    description:
-      "Request, collect, and showcase 5-star reviews automatically — building the trust that wins new customers.",
+      "It guides customers toward a confirmed booking and sends the appointment details to your team.",
   },
 ];
 
@@ -54,15 +40,15 @@ export default function Services() {
     <section id="services" className="relative scroll-mt-24 py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="Services"
-          title="AI services built for real business growth"
-          highlight="real business growth"
-          subtitle="Modular systems you can start with one piece and expand over time — each designed to save hours and capture more revenue."
+          eyebrow="One Solution"
+          title="What Your AI Receptionist Can Do"
+          highlight="AI Receptionist"
+          subtitle="One AI receptionist that answers calls, handles questions, captures customer details, and books appointments 24/7."
         />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, i) => (
-            <Reveal key={service.title} delay={(i % 3) * 100} as="article" className="h-full">
+            <Reveal key={service.title} delay={(i % 4) * 100} as="article" className="h-full">
               <ServiceCard {...service} />
             </Reveal>
           ))}
