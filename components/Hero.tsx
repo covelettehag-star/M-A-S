@@ -1,17 +1,17 @@
 import { IconArrow, IconWebsite, IconVoice, IconTarget, IconCalendar } from "./icons";
 
 const flowSteps = [
-  "Lead Captured",
-  "AI Replies",
+  "Call Answered",
+  "Questions Answered",
+  "Customer Details Collected",
   "Appointment Booked",
-  "Follow-up Sent",
 ];
 
 const trustBadges = [
-  { label: "AI Websites", icon: IconWebsite },
-  { label: "Voice Agents", icon: IconVoice },
-  { label: "Lead Automation", icon: IconTarget },
-  { label: "Booking Systems", icon: IconCalendar },
+  { label: "Answers Calls", icon: IconVoice },
+  { label: "Books Appointments", icon: IconCalendar },
+  { label: "Works 24/7", icon: IconWebsite },
+  { label: "Reduces Missed Leads", icon: IconTarget },
 ];
 
 export default function Hero() {
@@ -30,27 +30,27 @@ export default function Hero() {
         <div className="flex flex-col items-start gap-7">
           <span className="inline-flex animate-fade-up items-center gap-2 rounded-full border border-champagne-500/25 bg-champagne-500/[0.06] px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-champagne-200">
             <span className="h-1.5 w-1.5 animate-pulse-glow rounded-full bg-champagne-300" />
-            AI Automation Agency
+            24/7 AI Receptionist
           </span>
 
           <h1 className="text-balance text-4xl font-extrabold leading-[1.05] tracking-tight text-cream-50 sm:text-5xl md:text-6xl lg:text-[4rem]">
-            Luxury <span className="text-shimmer">AI Systems</span> for Modern
-            Businesses
+            AI Receptionist That{" "}
+            <span className="text-shimmer">Books Appointments</span> 24/7
           </h1>
 
           <p className="max-w-xl text-pretty text-base leading-relaxed text-cream-300/85 sm:text-lg">
-            We build AI-powered websites, automations, chatbots, voice agents,
-            and lead systems that help small businesses look premium, respond
-            faster, and grow smarter.
+            Never miss another customer call. MirthLuxe AI Studio builds AI
+            receptionists that answer questions, collect customer details, and
+            book appointments automatically — even when your business is closed.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row">
             <a href="#contact" className="btn-gold">
-              Book a Free AI Audit
+              Book a Free Demo
               <IconArrow className="h-4 w-4" />
             </a>
-            <a href="#services" className="btn-ghost">
-              View Services
+            <a href="/ai-demo" className="btn-ghost">
+              Try the AI Receptionist
             </a>
           </div>
 
@@ -68,7 +68,7 @@ export default function Hero() {
           </ul>
         </div>
 
-        {/* Right: orb + automation flow panel */}
+        {/* Right: orb + AI receptionist flow panel */}
         <div className="relative">
           {/* Glowing orb */}
           <div className="relative mx-auto h-64 w-64 sm:h-72 sm:w-72">
@@ -78,11 +78,11 @@ export default function Hero() {
             <div className="absolute inset-0 animate-float rounded-full bg-[radial-gradient(circle_at_30%_30%,rgba(247,236,217,0.9),rgba(168,126,79,0.5)_45%,rgba(11,11,13,0.2)_75%)] shadow-glow" />
           </div>
 
-          {/* Automation flow panel */}
+          {/* AI receptionist flow panel */}
           <div className="gradient-border glass-strong mt-[-2rem] rounded-3xl p-5 shadow-card sm:p-6">
             <div className="mb-4 flex items-center justify-between">
               <span className="text-xs font-medium uppercase tracking-[0.18em] text-champagne-200">
-                Automation Flow
+                Receptionist Flow
               </span>
               <span className="inline-flex items-center gap-1.5 text-xs text-cream-300/70">
                 <span className="h-2 w-2 animate-pulse-glow rounded-full bg-emerald-400" />
