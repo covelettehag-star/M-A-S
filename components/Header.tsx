@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
@@ -6,11 +7,10 @@ import Logo from "./Logo";
 const bookingUrl = "https://book.mirthluxeaistudio.com/book-page-914668";
 
 const navLinks = [
-  { label: "Services", href: "/#services" },
-  { label: "Process", href: "/#process" },
-  { label: "Work", href: "/#work" },
+  { label: "AI Receptionist", href: "/#services" },
+  { label: "How It Works", href: "/#process" },
+  { label: "Demo", href: "/ai-demo" },
   { label: "FAQ", href: "/#faq" },
-  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Header() {
@@ -19,6 +19,7 @@ export default function Header() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
 
@@ -58,6 +59,7 @@ export default function Header() {
               className="group relative text-sm font-medium text-cream-200/80 transition-colors hover:text-cream-50"
             >
               {link.label}
+
               <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-gold-gradient transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
@@ -65,7 +67,7 @@ export default function Header() {
 
         <div className="hidden lg:block">
           <a href={bookingUrl} className="btn-gold">
-            Book a Free AI Audit
+            Book a Free Demo
           </a>
         </div>
 
@@ -82,11 +84,13 @@ export default function Header() {
                 open ? "top-1.5 rotate-45" : ""
               }`}
             />
+
             <span
               className={`absolute left-0 top-1.5 h-0.5 w-5 bg-current transition-all duration-300 ${
                 open ? "opacity-0" : ""
               }`}
             />
+
             <span
               className={`absolute left-0 top-3 h-0.5 w-5 bg-current transition-all duration-300 ${
                 open ? "top-1.5 -rotate-45" : ""
@@ -120,7 +124,7 @@ export default function Header() {
             onClick={() => setOpen(false)}
             className="btn-gold mt-2 justify-center"
           >
-            Book a Free AI Audit
+            Book a Free Demo
           </a>
         </nav>
       </div>
