@@ -7,17 +7,17 @@ import {
 } from "./icons";
 
 const flowSteps = [
-  "Call Answered",
-  "Questions Answered",
-  "Customer Details Collected",
+  "Incoming Call Answered",
+  "Questions Handled",
+  "Client Details Captured",
   "Appointment Booked",
 ];
 
 const trustBadges = [
-  { label: "Answers Calls", icon: IconVoice },
+  { label: "Answers Every Call", icon: IconVoice },
   { label: "Books Appointments", icon: IconCalendar },
-  { label: "Works 24/7", icon: IconWebsite },
-  { label: "Reduces Missed Leads", icon: IconTarget },
+  { label: "Works After Hours", icon: IconWebsite },
+  { label: "Captures More Leads", icon: IconTarget },
 ];
 
 export default function Hero() {
@@ -40,13 +40,14 @@ export default function Hero() {
           </span>
 
           <h1 className="text-balance text-4xl font-extrabold leading-[1.05] tracking-tight text-cream-50 sm:text-5xl md:text-6xl lg:text-[3.8rem]">
-            Your{" "}
-            <span className="text-shimmer">24/7 AI Receptionist</span>
+            Turn Missed Calls Into{" "}
+            <span className="text-shimmer">Booked Appointments</span>
           </h1>
 
           <p className="max-w-xl text-pretty text-base leading-relaxed text-cream-300/85 sm:text-lg">
-            Built for wellness clinics to answer calls, handle common
-            questions, and book appointments automatically—even after hours.
+            We help wellness clinics stop losing appointment inquiries with a
+            24/7 AI receptionist that answers calls, handles common questions,
+            captures client details, and books appointments automatically.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row">
@@ -56,7 +57,7 @@ export default function Hero() {
             </a>
 
             <a href="/ai-demo" className="btn-ghost">
-              Try the AI Receptionist
+              Hear the AI Receptionist
             </a>
           </div>
 
@@ -74,7 +75,7 @@ export default function Hero() {
           </ul>
         </div>
 
-        {/* Right: orb + AI receptionist flow panel */}
+        {/* Right: orb + booking flow panel */}
         <div className="relative">
           {/* Glowing orb */}
           <div className="relative mx-auto h-64 w-64 sm:h-72 sm:w-72">
@@ -84,32 +85,32 @@ export default function Hero() {
             <div className="absolute inset-0 animate-float rounded-full bg-[radial-gradient(circle_at_30%_30%,rgba(247,236,217,0.9),rgba(168,126,79,0.5)_45%,rgba(11,11,13,0.2)_75%)] shadow-glow" />
           </div>
 
-          {/* AI receptionist flow panel */}
+          {/* Booking flow panel */}
           <div className="gradient-border glass-strong mt-[-2rem] rounded-3xl p-5 shadow-card sm:p-6">
             <div className="mb-4 flex items-center justify-between">
               <span className="text-xs font-medium uppercase tracking-[0.18em] text-champagne-200">
-                Receptionist Flow
+                Appointment Booking Flow
               </span>
 
               <span className="inline-flex items-center gap-1.5 text-xs text-cream-300/70">
                 <span className="h-2 w-2 animate-pulse-glow rounded-full bg-emerald-400" />
-                Live
+                Available 24/7
               </span>
             </div>
 
             <ul className="flex flex-col gap-2.5">
-              {flowSteps.map((step, i) => (
+              {flowSteps.map((step, index) => (
                 <li
                   key={step}
                   className="flex items-center gap-3"
                   style={{
                     animation: `flow 2.4s ease-in-out ${
-                      i * 0.4
+                      index * 0.4
                     }s infinite`,
                   }}
                 >
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-champagne-400/40 bg-champagne-500/10 text-xs font-semibold text-champagne-200">
-                    {i + 1}
+                    {index + 1}
                   </span>
 
                   <div className="glass flex-1 rounded-xl px-4 py-2.5 text-sm font-medium text-cream-100">
