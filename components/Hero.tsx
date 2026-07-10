@@ -1,4 +1,10 @@
-import { IconArrow, IconWebsite, IconVoice, IconTarget, IconCalendar } from "./icons";
+import {
+  IconArrow,
+  IconWebsite,
+  IconVoice,
+  IconTarget,
+  IconCalendar,
+} from "./icons";
 
 const flowSteps = [
   "Call Answered",
@@ -30,7 +36,7 @@ export default function Hero() {
         <div className="flex max-w-2xl flex-col items-start gap-7">
           <span className="inline-flex animate-fade-up items-center gap-2 rounded-full border border-champagne-500/25 bg-champagne-500/[0.06] px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-champagne-200">
             <span className="h-1.5 w-1.5 animate-pulse-glow rounded-full bg-champagne-300" />
-            24/7 AI Receptionist
+            AI Receptionist for Wellness Clinics
           </span>
 
           <h1 className="text-balance text-4xl font-extrabold leading-[1.05] tracking-tight text-cream-50 sm:text-5xl md:text-6xl lg:text-[3.8rem]">
@@ -39,8 +45,8 @@ export default function Hero() {
           </h1>
 
           <p className="max-w-xl text-pretty text-base leading-relaxed text-cream-300/85 sm:text-lg">
-            Answer calls, collect customer details, and book appointments
-            automatically — even when your business is closed.
+            Built for wellness clinics to answer calls, handle common
+            questions, and book appointments automatically—even after hours.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row">
@@ -48,6 +54,7 @@ export default function Hero() {
               Book a Free Demo
               <IconArrow className="h-4 w-4" />
             </a>
+
             <a href="/ai-demo" className="btn-ghost">
               Try the AI Receptionist
             </a>
@@ -83,6 +90,7 @@ export default function Hero() {
               <span className="text-xs font-medium uppercase tracking-[0.18em] text-champagne-200">
                 Receptionist Flow
               </span>
+
               <span className="inline-flex items-center gap-1.5 text-xs text-cream-300/70">
                 <span className="h-2 w-2 animate-pulse-glow rounded-full bg-emerald-400" />
                 Live
@@ -94,11 +102,16 @@ export default function Hero() {
                 <li
                   key={step}
                   className="flex items-center gap-3"
-                  style={{ animation: `flow 2.4s ease-in-out ${i * 0.4}s infinite` }}
+                  style={{
+                    animation: `flow 2.4s ease-in-out ${
+                      i * 0.4
+                    }s infinite`,
+                  }}
                 >
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-champagne-400/40 bg-champagne-500/10 text-xs font-semibold text-champagne-200">
                     {i + 1}
                   </span>
+
                   <div className="glass flex-1 rounded-xl px-4 py-2.5 text-sm font-medium text-cream-100">
                     {step}
                   </div>
