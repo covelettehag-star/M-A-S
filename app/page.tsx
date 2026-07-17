@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import LostRevenueCalculator from "@/components/LostRevenueCalculator";
 import Services from "@/components/Services";
+import AiDemo from "@/components/AiDemo";
 import Pricing from "@/components/Pricing";
 import Process from "@/components/Process";
 import Portfolio from "@/components/Portfolio";
@@ -17,11 +18,13 @@ export default function Home() {
     <>
       <Background />
       <Header />
+
       <main className="relative z-10">
         <Hero />
         <Problem />
         <LostRevenueCalculator />
         <Services />
+        <AiDemo />
         <Pricing />
         <Process />
         <Portfolio />
@@ -29,6 +32,7 @@ export default function Home() {
         <CTA />
         <FAQ />
       </main>
+
       <Footer />
     </>
   );
