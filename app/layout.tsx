@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -22,14 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={poppins.variable}>
-      <body className="font-sans antialiased">
-        {children}
-
-        <Script
-          src="https://buildmyagent.io/widget/6a312c99aaf6a2da575bcbea/widget-professional.js?widgetId=6a312c99aaf6a2da575bcbea"
-          strategy="afterInteractive"
-        />
-      </body>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }
